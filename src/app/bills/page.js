@@ -71,7 +71,7 @@ export default function BillsPage() {
           page: pagination.page,
           search: searchQuery 
         }),
-        customersAPI.getAll({ limit: 100 }),
+        customersAPI.getAll({ limit: 1000 }),
         dashboardAPI.getBillingCycles(),
       ]);
       setBills(billsRes.data.bills);
