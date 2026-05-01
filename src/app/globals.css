@@ -667,6 +667,14 @@ tr:hover {
   overflow-y: auto;
 }
 
+.confirmation-modal {
+  max-width: 400px;
+}
+
+.modal-body {
+  margin-bottom: 1rem;
+}
+
 .modal-header {
   display: flex;
   justify-content: space-between;
