@@ -125,7 +125,7 @@ export const billsAPI = {
   getById: (id) => api.get(`/bills/${id}`),
   create: (data) => api.post('/bills', data),
   update: (id, data) => api.patch(`/bills/${id}`, data), // for status update
-  updateBill: (id, data) => api.patch(`/bills/${id}/update-bill`, data), // for bill content update
+  updateBill: (id, data) => api.post(`/bills/${id}/update-bill`, data), // for bill content update
   delete: (id) => api.delete(`/bills/${id}`),
   getLatestByCustomer: (customerId) => api.get(`/bills/customer/${customerId}/latest`),
 };
