@@ -50,7 +50,7 @@ export default function PaymentsPage() {
 
   const fetchData = async () => {
     try {
-      const params = { status: statusFilter, limit: 100 };
+      const params = { status: statusFilter, limit: 1000 };
       if (searchQuery && searchQuery.trim()) {
         params.search = searchQuery.trim();
       }
@@ -67,7 +67,7 @@ export default function PaymentsPage() {
     try {
       const [billsRes, customersRes] = await Promise.all([
         billsAPI.getAll({ status: '', limit: 1000 }),
-        customersAPI.getAll({ limit: 100 }),
+        customersAPI.getAll({ limit: 1000 }),
       ]);
       // Filter bills to only show unpaid and partial
       const filteredBills = billsRes.data.bills.filter(
