@@ -66,7 +66,7 @@ export default function PaymentsPage() {
   const fetchBillsAndCustomers = async () => {
     try {
       const [billsRes, customersRes] = await Promise.all([
-        billsAPI.getAll({ status: '', limit: 100 }),
+        billsAPI.getAll({ status: '', limit: 1000 }),
         customersAPI.getAll({ limit: 100 }),
       ]);
       // Filter bills to only show unpaid and partial
